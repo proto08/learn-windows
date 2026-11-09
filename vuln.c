@@ -18,6 +18,7 @@ int main(void) {
             value[strcspn(value, "\r\n")] = 0;
         }
     }
+    printf("%s\n", value);
     printf("\n--------------------------------------\n");
     fclose(fp);
 
@@ -27,7 +28,7 @@ int main(void) {
     printf("secret = %s\n", secret);
 
     if (strcmp(secret, "LOCKED") != 0) {
-        printf("bof");
+        printf("bof\n");
     }
     return 0;
 }

@@ -4,6 +4,7 @@
 
 int main(void) {
     char secret[16] = "LOCKED";
+    char dummy[16] = "DUMMY";
     char name[64];
 
     FILE *fp = fopen("config.ini", "r");
@@ -26,6 +27,7 @@ int main(void) {
 
     printf("name   = %s\n", name);
     printf("secret = %s\n", secret);
+    printf("dummy = %s\n", dummy);
 
     if (strcmp(secret, "LOCKED") != 0) {
         printf("bof\n");
